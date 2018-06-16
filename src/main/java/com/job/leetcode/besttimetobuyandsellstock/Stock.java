@@ -5,6 +5,23 @@ package com.job.leetcode.besttimetobuyandsellstock;
  */
 public class Stock {
 
+    public int maxProfitOnce(int[] prices){
+        if(null == prices || prices.length==0){
+            return 0;
+        }
+        int min = prices[0];
+        int result =0;
+        for (int price : prices) {
+            if (price < min) {
+                min = price;
+            }
+            if (price - min > result) {
+                result = price - min;
+            }
+        }
+        return result;
+    }
+
     public int maxProfit(int[] prices) {
         int result = 0;
         for (int i = 0; i < prices.length; i++) {
