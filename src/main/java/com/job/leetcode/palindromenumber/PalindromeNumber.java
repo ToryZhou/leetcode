@@ -1,5 +1,8 @@
 package com.job.leetcode.palindromenumber;
 
+/**
+ * https://leetcode-cn.com/problems/palindrome-number/description/
+ */
 public class PalindromeNumber {
 
     public boolean isPalindrome(int x) {

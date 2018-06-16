@@ -1,6 +1,8 @@
 package com.job.leetcode.besttimetobuyandsellstock;
 
-
+/**
+ * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
+ */
 public class Stock {
 
     public int maxProfit(int[] prices) {
