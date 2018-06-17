@@ -23,8 +23,22 @@ public class LotteryTest {
 
     private void printResult(double[] rate, String title) {
         Lottery lottery = new Lottery();
-        double[] result = lottery.winDrawLoss(rate);
+        double[] result = lottery.winDrawLossMin(rate);
         System.out.printf("%s, 赔率:%s(主胜),%s(平),%s(客胜)\n", title, rate[0], rate[1], rate[2]);
         System.out.printf("主胜买入%s, 平买入%s, 客胜买入%s, 加权收回总额  %s\n\n", result[0], result[1], result[2], result[3]);
+    }
+
+    @Test
+    public void testTwo(){
+        Lottery lottery = new Lottery();
+
+//        double[] germanyVsMexicoRate = {1.26, 4.62};
+//        lottery.winDrawMax(germanyVsMexicoRate);
+
+//        double[] brazilVsMexicoRate = {1.26, 4.40, 9.20};
+//        lottery.winDrawMax(brazilVsMexicoRate);
+
+        double[] d = {1.26, 8.45};
+        lottery.winDrawMax(d);
     }
 }
