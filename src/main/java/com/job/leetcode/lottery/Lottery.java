@@ -6,7 +6,7 @@ public class Lottery {
         double winRate = rate[0];
         double drawRate = rate[1];
         double loseRate = rate[2];
-        int money = 100;
+        int money = 10;
         double maxGet = 0;
         double wholeRate = winRate + drawRate + loseRate;
         int maxWinBuy = 0;
@@ -15,6 +15,7 @@ public class Lottery {
         for (int winBuy = 0; winBuy <= money; winBuy++) {
             for (int drawBuy = 0; drawBuy <= money - winBuy; drawBuy++) {
                 int loseBuy = money - winBuy - drawBuy;
+                System.out.printf("%s, %s, %s\n", winBuy * winRate, drawBuy * drawRate, loseBuy * loseRate);
                 double get = winBuy * (winRate / wholeRate) + drawBuy * (drawRate / wholeRate) + loseBuy * (loseRate / wholeRate);
                 if (get > maxGet) {
                     maxWinBuy = winBuy;
@@ -71,6 +72,22 @@ public class Lottery {
                 maxGet = get;
 //                System.out.printf("%s, %s,%s\n", maxWinBuy, maxDrawBuy, maxGet);
             }
+        }
+        return new double[]{maxWinBuy, maxDrawBuy, maxGet};
+    }
+
+    public double[] winDrawMaxToAverage(double[] rate) {
+        double winRate = rate[0];
+        double drawRate = rate[1];
+        int money = 100;
+        double maxGet = 0;
+        int maxWinBuy = 0;
+        int maxDrawBuy = 0;
+        for (int winBuy = 0; winBuy <= money; winBuy++) {
+            int drawBuy = money - winBuy;
+            double getWin = winBuy * winRate;
+            double getLose = drawBuy * drawRate;
+            System.out.printf("%s, %s\n", getWin, getLose);
         }
         return new double[]{maxWinBuy, maxDrawBuy, maxGet};
     }
