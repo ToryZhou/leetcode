@@ -87,7 +87,7 @@ public class Lottery {
             int drawBuy = money - winBuy;
             double getWin = winBuy * winRate;
             double getLose = drawBuy * drawRate;
-            System.out.printf("%s, %s\n", getWin, getLose);
+            System.out.printf("winBuy=%s, drawBy=%s, %s, %s\n", winBuy, drawBuy, getWin, getLose);
         }
         return new double[]{maxWinBuy, maxDrawBuy, maxGet};
     }

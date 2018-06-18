@@ -13,12 +13,14 @@ public class LotteryTest {
         double[] germanyMinusOneVsMexicoRate = {2.00, 3.40, 2.98};
         double[] brazilVsMexicoRate = {1.26, 4.40, 9.20};
         double[] brazilMinusOneVsMexicoRate = {1.90, 3.45, 3.19};
+        double[] swedenVsKorea = {1.78, 3.05, 4.20};
 //        printResult(costaVsSerbiaRate, "哥斯达(主) VS 塞尔维亚(客)");
 //        printResult(costaPlusOneVsSerbiaRate, "哥斯达(让球 主+1) VS 塞尔维亚(客)");
 //        printResult(germanyVsMexicoRate, "德国(主) VS 墨西哥(客)");
 //        printResult(germanyMinusOneVsMexicoRate, "德国(让球 主-1) VS 墨西哥(客)");
-        printResult(brazilVsMexicoRate, "巴西(主) VS 瑞士(客)");
+//        printResult(brazilVsMexicoRate, "巴西(主) VS 瑞士(客)");
 //        printResult(brazilMinusOneVsMexicoRate, "巴西(让球 主-1) VS 瑞士(客)");
+        printResult(swedenVsKorea, "瑞典(主) VS 韩国(客)");
     }
 
     private void printResult(double[] rate, String title) {
@@ -49,7 +51,12 @@ public class LotteryTest {
 //        double[] d = {1.26, 8.45};
 //        double[] d = {1.26, 4.6};
 //        double[] d = {1.25, 11};
-        double[] d = {1.26, 4.4};
+//        double[] d = {1.26, 4.4};
+//        double[] d = {1.78, 3.05};
+//        double[] d = {1.12, 6.85};
+//        double[] d = {1.34, 4.1};
+        double[] d = {1.35, 4.1};
+//        double[] d = {1.90, 2.98};
 
         lottery.winDrawMaxToAverage(d);
     }
