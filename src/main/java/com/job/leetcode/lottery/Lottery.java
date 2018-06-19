@@ -6,7 +6,7 @@ public class Lottery {
         double winRate = rate[0];
         double drawRate = rate[1];
         double loseRate = rate[2];
-        int money = 10;
+        int money = 100;
         double maxGet = 0;
         double wholeRate = winRate + drawRate + loseRate;
         int maxWinBuy = 0;
