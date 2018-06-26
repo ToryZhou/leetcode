@@ -1,5 +1,8 @@
 package com.job.leetcode.plusone;
 
+/**
+ * https://leetcode-cn.com/problems/plus-one/
+ */
 public class PlusOne {
 
     public int[] plusOne(int[] digits) {
