@@ -4,10 +4,28 @@ package com.job.leetcode.dynamicprogramming.coinchange;
  * https://leetcode-cn.com/problems/coin-change/description/
  */
 public class CoinChange {
+    private static int maxValue = 100000000;
 
+    private int search(int index, int amount, int[] coins) {
+        if (index >= coins.length) {
+            return maxValue;
+        }
+        if (amount == 0) {
+            return 0;
+        }
+        if (amount < 0) {
+            return maxValue;
+        }
+        return Math.min(search(index, amount - coins[index], coins) + 1,
+                search(index + 1, amount, coins));
+    }
 
-    //todo
     public int coinChange(int[] coins, int amount) {
+        int val = search(0, amount, coins);
+        return val < maxValue ? val : -1;
+    }
+
+    public int coinChangeError(int[] coins, int amount) {
         for (int i = 0; i < coins.length - 1; i++) {
             for (int j = i + 1; j < coins.length; j++) {
                 if (coins[j] < coins[i]) {
