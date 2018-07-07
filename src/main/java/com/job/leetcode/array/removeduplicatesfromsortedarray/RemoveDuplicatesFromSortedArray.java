@@ -1,4 +1,4 @@
-package com.job.leetcode.removeduplicatesfromsortedarray;
+package com.job.leetcode.array.removeduplicatesfromsortedarray;
 
 /**
  * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/

@@ -1,4 +1,4 @@
-package com.job.leetcode.removeduplicatesfromsortedarray;
+package com.job.leetcode.array.removeduplicatesfromsortedarray;
 
 import org.junit.Assert;
 import org.junit.Test;
