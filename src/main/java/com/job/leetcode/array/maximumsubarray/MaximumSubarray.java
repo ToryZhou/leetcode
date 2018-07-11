@@ -5,8 +5,14 @@ package com.job.leetcode.array.maximumsubarray;
  */
 public class MaximumSubarray {
 
-    // todo
     public int maxSubArray(int[] nums) {
-        return 0;
+        //todo
+        int result = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (result + nums[i] > result) {
+                result = result + nums[i];
+            }
+        }
+        return result;
     }
 }
