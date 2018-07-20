@@ -1,4 +1,4 @@
-package com.job.leetcode.pascalstriangle;
+package com.job.leetcode.array.pascalstriangle;
 
 import java.util.ArrayList;
 import java.util.List;

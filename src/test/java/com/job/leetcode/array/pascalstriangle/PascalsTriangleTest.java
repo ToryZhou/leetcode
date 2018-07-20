@@ -1,4 +1,4 @@
-package com.job.leetcode.pascalstriangle;
+package com.job.leetcode.array.pascalstriangle;
 
 import org.junit.Assert;
 import org.junit.Test;
