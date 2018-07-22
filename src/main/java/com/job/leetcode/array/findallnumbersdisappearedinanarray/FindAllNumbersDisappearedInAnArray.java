@@ -8,6 +8,11 @@ import java.util.List;
  */
 public class FindAllNumbersDisappearedInAnArray {
 
+    /**
+     * todo it takes the time too long
+     * @param nums
+     * @return
+     */
     public List<Integer> findDisappearedNumbers(int[] nums) {
         ArrayList<Integer> result = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
