@@ -6,7 +6,10 @@ package com.job.leetcode.array.onebitandtwobitcharacters;
 public class OneBitAndTwoBitCharacters {
 
     public boolean isOneBitCharacter(int[] bits) {
-        // todo
-        return false;
+        //todo
+        if (bits.length <= 1) {
+            return true;
+        }
+        return bits[bits.length - 1] == 0 && bits[bits.length - 2] == 0;
     }
 }
