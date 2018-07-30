@@ -6,9 +6,17 @@ package com.job.leetcode.array.movezeroes;
 public class MoveZeroes {
 
     public void moveZeroes(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            if(nums[i]==0){
-
+        int size = nums.length;
+        for (int i = 0; i < nums.length; ) {
+            if (nums[i] == 0) {
+                size--;
+                if (size <= i) {
+                    return;
+                }
+                System.arraycopy(nums, i + 1, nums, i, nums.length - 1 - i);
+                nums[nums.length - 1] = 0;
+            } else {
+                i++;
             }
         }
     }
