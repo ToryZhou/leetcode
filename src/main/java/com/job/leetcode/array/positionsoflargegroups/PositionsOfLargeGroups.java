@@ -9,14 +9,24 @@ import java.util.List;
 public class PositionsOfLargeGroups {
 
     public List<List<Integer>> largeGroupPositions(String S) {
-        ArrayList<List<Integer>> lists = new ArrayList<>();
+        List<List<Integer>> lists = new ArrayList<>();
         char[] chars = S.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            // todo
-            int begin = i;
-            int end = i;
-
-            char temp = chars[i];
+        for (int i = 0; i < chars.length - 1; ) {
+            int length = 1;
+            for (int j = i + 1; j < chars.length; j++) {
+                if (chars[j] == chars[i]) {
+                    length++;
+                } else {
+                    break;
+                }
+            }
+            if (length >= 3) {
+                List<Integer> integers = new ArrayList<>();
+                integers.add(i);
+                integers.add(i + length - 1);
+                lists.add(integers);
+            }
+            i = i + length;
         }
         return lists;
     }
