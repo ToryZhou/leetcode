@@ -8,6 +8,9 @@ public class DegreeOfAnArray {
 
     public int findShortestSubArray(int[] nums) {
         //todo
+        for(int i =0;i<nums.length;i++){
+
+        }
         return 0;
     }
 
