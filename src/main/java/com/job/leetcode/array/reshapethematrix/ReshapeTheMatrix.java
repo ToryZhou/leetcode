@@ -8,7 +8,11 @@ package com.job.leetcode.array.reshapethematrix;
 public class ReshapeTheMatrix {
 
     public int[][] matrixReshape(int[][] nums, int r, int c) {
+        if (nums.length * nums[0].length != r * c) {
+            return nums;
+        }
+        int[][] ints = new int[r][c];
         // todo
-        return null;
+        return ints;
     }
 }
