@@ -24,9 +24,9 @@ public class ReshapeTheMatrix {
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
                 System.out.println(i);
-                System.out.println(i * nums[0].length);
+                System.out.println(i * r);
                 System.out.println(j);
-                ints[i][j] = integers.get(i * nums[0].length + j);
+                ints[i][j] = integers.get(i * r + j);
             }
 
         }
