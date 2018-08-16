@@ -6,6 +6,16 @@ package com.job.leetcode.array.largestnumberatleasttwiceofothers;
 public class LargestNumberAtLeastTwiceOfOthers {
 
     public int dominantIndex(int[] nums) {
-        return 0;
+        int biggest = 0, second = 0, position = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > biggest) {
+                second = biggest;
+                biggest = nums[i];
+                position = i;
+            } else if (nums[i] > second) {
+                second = nums[i];
+            }
+        }
+        return biggest >= second * 2 ? position : -1;
     }
 }
