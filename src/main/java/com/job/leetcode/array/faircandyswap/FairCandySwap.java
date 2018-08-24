@@ -8,6 +8,16 @@ package com.job.leetcode.array.faircandyswap;
 public class FairCandySwap {
 
     public int[] fairCandySwap(int[] A, int[] B) {
+
+        // todo
+        int totalA=0;
+        for (int aA : A) {
+            totalA += aA;
+        }
+        int totalB=0;
+        for (int bB : B) {
+            totalB += bB;
+        }
         return null;
     }
 }
