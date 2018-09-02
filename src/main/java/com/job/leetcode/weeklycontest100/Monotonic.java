@@ -6,9 +6,14 @@ package com.job.leetcode.weeklycontest100;
 public class Monotonic {
 
     public boolean isMonotonic(int[] A) {
-        // todo
-        for (int i = 1; i < A.length - 1; i++) {
-            if (A[i] >= A[i - 1] != A[i + 1] >= A[i] && A[i] != A[i - 1] & A[i + 1] != A[i]) {
+        Boolean bigger = false;
+        Boolean decided = false;
+        for (int i = 0; i < A.length - 1; i++) {
+            if (!decided && A[i] != A[i + 1]) {
+                decided = true;
+                bigger = A[i + 1] > A[i];
+            }
+            if (decided && A[i + 1] != A[i] && A[i + 1] > A[i] != bigger) {
                 return false;
             }
         }
