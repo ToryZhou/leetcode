@@ -5,13 +5,17 @@ package com.job.leetcode.dynamicprogramming.rangesumqueryimmutable;
  */
 public class NumArray {
 
-    public NumArray(int[] nums) {
+    private int[] nums;
 
+    public NumArray(int[] nums) {
+        this.nums = nums;
     }
 
     public int sumRange(int i, int j) {
-        //todo
-
-        return 0;
+        int result = 0;
+        for (int n = i; n <= j; n++) {
+            result += nums[n];
+        }
+        return result;
     }
 }
