@@ -7,7 +7,11 @@ public class StoneGame {
     public boolean stoneGame(int[] piles) {
 
         //todo
-        return false;
+        boolean result = false;
+        for(){
+
+        }
+        return result;
 
     }
 }
